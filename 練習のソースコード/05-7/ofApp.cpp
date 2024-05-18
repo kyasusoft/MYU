@@ -16,10 +16,12 @@ void ofApp::setup(){
         for(int j = 1 ; j <= 9 ; j++) {
             // 桁を合わせるために空白の数を調整する
             if( i * j < 10) {
-                cout << i * j << "  ";
+                cout << " " << i * j << "  ";
             } else {
-                cout << i * j << " ";
+                cout <<        i * j << "  ";
             }
+//            // 三項演算子を使ってif文を書き換える
+//            (i*j < 10) ? cout << " " << i * j << "  " : cout << i * j << "  ";
         }
         // 改行
         cout << endl;
@@ -33,7 +35,7 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-/*
+
     // 練習 5-7b ================================================
     for(int i = 0 ; i < 3 ; i++) {
         for(int j = 0 ; j < 4 ; j++) {
@@ -50,7 +52,12 @@ void ofApp::draw(){
             ofDrawCircle(x + r / 2.5, y, r / 7);
         }
     }
-*/
+
+}
+
+//--------------------------------------------------------------
+void ofApp::exit(){
+
 }
 
 //--------------------------------------------------------------
@@ -80,6 +87,11 @@ void ofApp::mousePressed(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mouseReleased(int x, int y, int button){
+
+}
+
+//--------------------------------------------------------------
+void ofApp::mouseScrolled(int x, int y, float scrollX, float scrollY){
 
 }
 
