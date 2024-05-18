@@ -48,6 +48,7 @@ void ofApp::update(){
     }
     bY = bY + bDy;
     
+
     // 重なり検出
         // 考え方
         //  （正方形Aのxが正方形Bの幅幅の中にいる　または　正方形Bのx が正方形Aの横幅の中にいる）　かつ
@@ -57,22 +58,44 @@ void ofApp::update(){
          ((bY <= aY && aY <= bY + height) || (aY <= bY && bY <= aY + height))     ) {
         over = true;
     }
+
 /*
-    // 重なり検出（別案）
-    // 考え方
-    //  （正方形Aの各頂点が正方形Bの中にいる
+    // 重なり検出（別解）
+        // 考え方
+        // 　正方形Aの各頂点のどれかが、正方形Bの中にいれば重なっている
     over = false;
-    if ((bX <= aX && aX <= bX + width) && (bY <= aY && aY <= bY + height)) {
+    // 左上
+    if ((bX <= aX          && aX          <= bX + width ) &&
+        (bY <= aY          && aY          <= bY + height)) {
         over = true;
     }
-    if ((bX <= aX + width && aX + width <= bX + width) && (bY <= aY && aY <= bY + height)) {
+    // 左下
+    if ((bX <= aX          && aX          <= bX + width  ) &&
+        (bY <= aY + height && aY + height <= bY + height)) {
         over = true;
     }
-    if ((bX <= aX + width && aX + width <= bX + width) && (bY <= aY + height && aY <= bY + height)) {
+    // 右上
+    if ((bX <= aX + width  && aX + width  <= bX + width ) &&
+        (bY <= aY          && aY          <= bY + height)) {
         over = true;
     }
-    if ((bX <= aX && aX <= bX + width) && (bY <= aY + height && aY <= bY + height)) {
+    // 右下
+    if ((bX <= aX + width  && aX + width  <= bX + width) &&
+        (bY <= aY + height && aY + height <= bY + height)) {
         over = true;
+    }
+*/
+/*
+    // 重なり検出（別解２）
+        // 考え方
+        // (正方形AのXが正方形BのX+幅幅より小さい) かつ (正方形BのXが正方形AのX+幅幅より小さい) かつ
+        // (正方形AのYが正方形BのY+高さより小さい) かつ (正方形BのYが正方形AのY+高さより小さい)
+    over = false;
+    if (aX < bX + width && bX < aX + width && aY < bY + height && bY < aY + height) {
+        over = true;
+    }
+    else {
+        over = false;
     }
 */
 }
@@ -95,6 +118,11 @@ void ofApp::draw(){
     ofDrawRectangle(bX, bY, width, height);
 
 }
+
+//--------------------------------------------------------------
+//void ofApp::exit(){
+//
+//}
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
@@ -125,6 +153,11 @@ void ofApp::mousePressed(int x, int y, int button){
 void ofApp::mouseReleased(int x, int y, int button){
 
 }
+
+//--------------------------------------------------------------
+//void ofApp::mouseScrolled(int x, int y, float scrollX, float scrollY){
+//
+//}
 
 //--------------------------------------------------------------
 void ofApp::mouseEntered(int x, int y){
