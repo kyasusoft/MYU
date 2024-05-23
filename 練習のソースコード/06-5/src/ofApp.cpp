@@ -1,8 +1,5 @@
 #include "ofApp.h"
 
-// 練習6-5a
-ofSoundPlayer player;    // サウンドプレイヤーのインスタンスを生成
-
 // 練習6-5b
 bool isPaused = false;
 

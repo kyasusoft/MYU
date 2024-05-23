@@ -1,9 +1,5 @@
 #include "ofApp.h"
 
-// フォント処理装置のインスタンス生成
-ofTrueTypeFont font40;
-ofTrueTypeFont font80;
-
 int x = 10;
 int y = 400;
 

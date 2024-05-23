@@ -23,4 +23,6 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo) override;
 		void gotMessage(ofMessage msg) override;
 
+    // 練習6-5a
+    ofSoundPlayer player;    // サウンドプレイヤーのインスタンスを生成
 };

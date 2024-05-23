@@ -23,4 +23,7 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo) override;
 		void gotMessage(ofMessage msg) override;
 	
+    // フォント処理装置のインスタンス生成
+    ofTrueTypeFont font40;
+    ofTrueTypeFont font80;
 };
