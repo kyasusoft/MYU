@@ -8,13 +8,13 @@ void ofApp::setup(){
     ofBackground(255, 255, 255);
     
     // fontの準備 40ポイント
-    ofTrueTypeFontSettings settings40("ヒラギノ丸ゴ ProN W4.ttc", 40);
+    ofTrueTypeFontSettings settings40("hiragino_ProN_W4.ttc", 40);  // フォント名は英数字にするのが無難です
     settings40.addRanges(ofAlphabet::Japanese);
     settings40.addRanges(ofAlphabet::Latin);
     font40.load(settings40);
     
     // fontの準備 80ポイント
-    ofTrueTypeFontSettings settings80("ヒラギノ丸ゴ ProN W4.ttc", 80);
+    ofTrueTypeFontSettings settings80("hiragino_ProN_W4.ttc", 80);  // フォント名は英数字にするのが無難です
     settings80.addRanges(ofAlphabet::Japanese);
     settings80.addRanges(ofAlphabet::Latin);
     font80.load(settings80);
@@ -30,14 +30,14 @@ void ofApp::draw(){
     
     // 40ポイントの文字を描画
     ofSetColor(100, 200, 0);
-    font40.drawString("文字列の描画 40pt", 100, 200);
+    font40.drawString(u8"文字列の描画 40pt", 100, 200);       // 日本語が文字化けする場合は u8 を先頭に付けてください
     // 文字列の幅を表示
     string w40 = "width=" + to_string(font40.stringWidth("文字列の描画 40 pt"));
     ofDrawBitmapString(w40, 100, 250);
 
     // 80ポイントの文字を描画
     ofSetColor(255, 0, 0);
-    string str = "変数で文字を描画 80pt";
+    string str = u8"変数で文字を描画 80pt";                     // 日本語が文字化けする場合は u8 を先頭に付けてください
     font80.drawString(str, x, y);
     // 文字列の幅を表示
     string w80 = "width=" + to_string(font80.stringWidth(str));

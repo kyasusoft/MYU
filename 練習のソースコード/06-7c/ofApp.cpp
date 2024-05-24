@@ -59,7 +59,7 @@ void ofApp::mouseDragged(int x, int y, int button){
     // 練習6-7c
     
     // カーソルがボールさん領域にあれば動かす（領域チェックは正方形）
-    if ((x - r < x && x < x + r) && (y - r < y && y < y + r)) {
+    if ((::x - r < x && x < ::x + r) && (::y - r < y && y < ::y + r)) {
         // マウス位置をボールの中心にする
         ::x = x;
         ::y = y;

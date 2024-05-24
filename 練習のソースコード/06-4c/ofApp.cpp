@@ -39,18 +39,12 @@ void ofApp::update(){
         // 左右の壁に当たった
         if (x[i] < r[i] || ofGetWidth() - r[i] < x[i]) {
             dx[i]    = -dx[i];
-            red[i]   = ofRandom(0, 255);
-            green[i] = ofRandom(0, 255);
-            blue[i]  = ofRandom(0, 255);
         }
         x[i] = x[i] + dx[i];
         
         // 上下の壁に当たった
         if (y[i] < r[i] || ofGetHeight()- r[i] < y[i]) {
             dy[i]    = -dy[i];
-            red[i]   = ofRandom(0, 255);
-            green[i] = ofRandom(0, 255);
-            blue[i]  = ofRandom(0, 255);
         }
         y[i] = y[i] + dy[i];
     }

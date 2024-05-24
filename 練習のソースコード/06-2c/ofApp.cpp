@@ -51,48 +51,30 @@ void ofApp::update(){
     // ball 1
     if (x < r || ofGetWidth() - r < x) {
         dx = -dx;
-        red   = ofRandom(0, 255);
-        green = ofRandom(0, 255);
-        blue  = ofRandom(0, 255);
     }
     x = x + dx;
     if (y < r || ofGetHeight()- r < y) {
         dy = -dy;
-        red   = ofRandom(0, 255);
-        green = ofRandom(0, 255);
-        blue  = ofRandom(0, 255);
     }
     y = y + dy;
     
     // ball 2
     if (x2 < r2 || ofGetWidth() - r2 < x2) {
         dx2 = -dx2;
-        red2   = ofRandom(0, 255);
-        green2 = ofRandom(0, 255);
-        blue2  = ofRandom(0, 255);
     }
     x2 = x2 + dx2;
     if (y2 < r2 || ofGetHeight()- r2 < y2) {
         dy2 = -dy2;
-        red2   = ofRandom(0, 255);
-        green2 = ofRandom(0, 255);
-        blue2  = ofRandom(0, 255);
     }
     y2 = y2 + dy2;
 
     // ball 3
     if (x3 < r3 || ofGetWidth() - r3 < x3) {
         dx3 = -dx3;
-        red3   = ofRandom(0, 255);
-        green3 = ofRandom(0, 255);
-        blue3  = ofRandom(0, 255);
     }
     x3 = x3 + dx3;
     if (y3 < r3 || ofGetHeight()- r3 < y3) {
         dy3 = -dy3;
-        red3   = ofRandom(0, 255);
-        green3 = ofRandom(0, 255);
-        blue3  = ofRandom(0, 255);
     }
     y3 = y3 + dy3;
 }
