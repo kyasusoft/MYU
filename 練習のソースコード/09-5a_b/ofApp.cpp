@@ -22,9 +22,7 @@ void ofApp::draw(){
     // 練習9-5b ===============================================
     ofSetColor(255, 0, 0);
     for (int x = 200 ; x <= 400 ; x++) {
-        for (int y = 400 ; y <= 400 ; y++) {
-            ofDrawCircle(x, y, 1);
-        }
+        ofDrawCircle(x, 400, 1);
     }
     
 }

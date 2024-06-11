@@ -30,6 +30,7 @@ void ofApp::draw(){
     ofDrawRectangle(x - r, y - r, 2 * r, 2 * r);
     
     ofPopMatrix();              // 座標系復元
+
 //    ofRotateDeg(-45);          // 逆変換で座標系を戻す(Push,Popの代わり）
     
     // ボール

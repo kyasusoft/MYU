@@ -12,12 +12,12 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    // 原点移動
+    // 原点を移動
     ofTranslate(400, 400);
-    // Y座標反転
+    // Y座標を反転
     ofScale(1, -1);
 
-    // X軸、Y軸
+    // X軸、Y軸を描画
     ofSetColor(255, 255, 255);
     ofSetLineWidth(1);
     ofDrawLine(-400,    0, 400,   0);
@@ -25,18 +25,16 @@ void ofApp::draw(){
     
     // 練習9-9a
     ofSetColor(255, 0, 0);
-    for (int i = -400 ; i < 400 ; i++) {
-        int x = i;
+    for (int x = -400 ; x < 400 ; x++) {
         int y = 2 * x + 50;
         ofDrawCircle(x, y, 2);
     }
+
     // 練習9-9b
 //    ofSetColor(0, 255, 0);
-//    for (float i = -400 ; i < 400 ; i += 1) {
-//        float x = i / 10;           // 見やすくするためにx方向に10倍にする
+//    for (float x = -400 ; x < 400 ; x += 1) {
 //        float y = x*x - 20*x + 120;
-//        ofDrawCircle(i, y, 2);
-//
+//        ofDrawCircle(x, y, 2);
 //    }
 }
 

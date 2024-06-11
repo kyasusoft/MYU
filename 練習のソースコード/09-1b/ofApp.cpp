@@ -12,8 +12,11 @@ void ofApp::setup(){
     
     // 1000本の開始位置、終了位置をランダムで設定
     for (int i = 0 ; i < MAX ; i++) {
+        // 開始位置をランダムで設定
         sx[i] = ofRandom(0, ofGetWidth());
         sy[i] = ofRandom(0, ofGetHeight());
+        
+        // 終了位置をランダムで設定
         ex[i] = ofRandom(0, ofGetWidth());
         ey[i] = ofRandom(0, ofGetHeight());
     }
